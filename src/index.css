@@ -13,6 +13,14 @@
   .sidebar-hr {
     @apply border-t border-gray-600 my-4;
   }
+  .sidebarArrow {
+    @apply relative flex items-center justify-center h-12 w-12
+    mt-2 mb-2 ml-auto mr-2 shadow-lg bg-slate-700 text-white
+    hover:bg-slate-500
+    rounded-3xl hover:rounded-xl
+    transition-all duration-300 ease-linear
+    cursor-pointer; 
+  }
   .sidebar-icon {
     @apply relative flex items-center justify-center h-12 w-12 
     mt-2 mb-2 mx-auto shadow-lg bg-gray-800
