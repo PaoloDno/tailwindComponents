@@ -48,8 +48,11 @@ const Sidebar = () => {
       default:
         setPageTitle('Home');
         dispatch(updateSections([
-          { id: 'home', label: 'Home' },
-          { id: 'about', label: 'About' },
+          { id: 'Home', label: 'Home' },
+          { id: 'Template', label: 'Template' },
+          { id: 'Components', label: 'Components' },
+          { id: 'Themes', label: 'Themes' },
+          { id: 'About', label: 'About' },
         ]));
         break;
     }
@@ -71,7 +74,7 @@ const Sidebar = () => {
           <ul className="space-y-2">
             {sections.map((section) => (
               <a href={`#${section.id}`}>
-              <li key={section.id} className="hover:bg-slate-600 rounded-md p-2 cursor-pointer">
+              <li key={section.id} className="sidebar-label">
                 {section.label}
               </li>
               </a>

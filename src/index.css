@@ -29,6 +29,14 @@
     transition-all duration-300 ease-linear
     cursor-pointer;
   }
+  .sidebar-label{
+    @apply relative flex items-center justify-center h-10 min-w-20 
+    mt-2 mb-2 mx-auto shadow-md bg-gray-800 text-white text-sm
+    hover:bg-white hover:text-black
+    rounded-sm hover:rounded-2xl
+    transition-all duration-300 ease-linear
+    cursor-pointer;
+  }
   .sidebar-tooltip {
     @apply absolute w-auto p-2 m-2 min-w-max left-14
         rounded-md shadow-md
@@ -36,4 +44,5 @@
         text-xs font-bold
         transition-all duration-100 scale-0 origin-left;
   }
+
 }
