@@ -18,6 +18,7 @@ function App() {
       <Route path="/Template" element={<TemplatePage />} />
       <Route path="/Theme" element={<ThemePage />} />
       <Route path="/AboutUs" element={<AboutUsPage />} />
+      <Route path='*' element={<LandingPage/>} />
       </Routes>
     </Router>
       
