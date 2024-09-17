@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import ThemeToggleButton from "./components/ThemeToggleButton";
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Set isScrolled state to true if scrolled down, false if at the top
-      setIsScrolled(window.scrollY > 0);
+       setIsScrolled(window.scrollY > 0);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -23,11 +24,11 @@ const Header = () => {
       } hover:bg-opacity-100 z-50`}
     >
       <div className="relative h-20 w-screen">
-        <div className="flex relative flex-row items-center mx-full">
-          <Link to="/">
+        <div className="flex relative flex-row items-center mx-5 justify-evenly">
+          <Link to="/" className="flex">
             <div className="p-1 px-4 font-bold text-lg">My Tailwind Design Library</div>
           </Link>
-          <nav className="flex-row p-1 mx-auto">
+          <nav className="flex flex-row p-1 mx-2">
             <ul className="flex flex-row px-2 justify-between w-auto">
               <li className="btn-header">
                 <Link to="/Template">Template</Link>
@@ -42,7 +43,11 @@ const Header = () => {
                 <Link to="/AboutUs">About</Link>
               </li>
             </ul>
-          </nav>
+            </nav>
+
+            <div className="flex">
+              <ThemeToggleButton />
+            </div>
         </div>
       </div>
     </header>

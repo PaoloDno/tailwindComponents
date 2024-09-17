@@ -3,12 +3,125 @@
 @tailwind utilities;
 
 
+@layer base {
+  :root {
+    --color-text-base: #333333; /* Darker shade for better contrast */
+    --color-text-muted: #284d4b; 
+    --color-text-inverted: #7ee9e9; /* White for inverted text */
+
+    --color-fill: #f5f7eb ; 
+    
+    --color-button-accent: #282e2e; 
+    --color-button-accent-hover: #607679; 
+    --color-button-accent-muted: #98b4b3; 
+    
+    --color-border-base: #d3eaf3; 
+    --color-border-muted: #52aca4; 
+
+    --color-gradient-start: #7ac4d6; 
+    --color-gradient-end: #bce2e0; 
+  }
+
+  .theme-sunset {
+    --color-text-base: #1A1A1A; /* Nearly black for good contrast */
+    --color-text-muted: #5f511a; 
+    --color-text-inverted: #ffffff; /* White for inverted text */
+
+    --color-fill: #ffc06d ; 
+    
+    --color-button-accent: #f84949; 
+    --color-button-accent-hover: #fc3030; 
+    --color-button-accent-muted: #eff0b0; 
+    
+    --color-border-base: #f5d7bf; 
+    --color-border-muted: #f39843; 
+
+    --color-gradient-start: #5c501a; 
+    --color-gradient-end: #FFE66D; 
+  }
+
+  .theme-ocean {
+    --color-text-base: #ffffff; /* White text for darker background */
+    --color-text-muted: #DEF2F1; 
+    --color-text-inverted: #73c3e0; /* Darker inverted text */
+
+    --color-fill: #FEFFFF; 
+    
+    --color-button-accent: #1b6872; 
+    --color-button-accent-hover: #1f94a3; 
+    --color-button-accent-muted: #DEF2F1; 
+    
+    --color-border-base: #d3eaf3; 
+    --color-border-muted: #43f3ea; 
+
+    --color-gradient-start: #015872; 
+    --color-gradient-end: #4f9994; 
+  }
+
+  .theme-midnight {
+    --color-text-base: #230d25; /* White for text on dark background */
+    --color-text-muted: #9D4EDD; 
+    --color-text-inverted: #151233; /* Light background with darker text */
+
+    --color-fill: #4A0D67; 
+    
+    --color-button-accent: #6A0572; 
+    --color-button-accent-hover: #9D4EDD; 
+    --color-button-accent-muted: #D9D7F1; 
+    
+    --color-border-base: #D9D7F1; 
+    --color-border-muted: #6A0572; 
+
+    --color-gradient-start: #6A0572; 
+    --color-gradient-end: #D9D7F1; 
+  }
+
+  .theme-forest {
+    --color-text-base: #ffffff; /* White for text on darker background */
+    --color-text-muted: #F8B195; 
+    --color-text-inverted: #355C7D; /* Darker text for light background */
+
+    --color-fill: #6C5B7B; 
+    
+    --color-button-accent: #355C7D; 
+    --color-button-accent-hover: #6C5B7B; 
+    --color-button-accent-muted: #F8B195; 
+    
+    --color-border-base: #C06C84; 
+    --color-border-muted: #355C7D; 
+
+    --color-gradient-start: #355C7D; 
+    --color-gradient-end: #F8B195; 
+  }
+
+  .theme-retro {
+    --color-text-base: #ffffff; /* White for text */
+    --color-text-muted: #F67280; 
+    --color-text-inverted: #355C7D; /* Darker inverted text */
+
+    --color-fill: #6C5B7B; 
+    
+    --color-button-accent: #F67280; 
+    --color-button-accent-hover: #C06C84; 
+    --color-button-accent-muted: #355C7D; 
+    
+    --color-border-base: #F67280; 
+    --color-border-muted: #355C7D; 
+
+    --color-gradient-start: #355C7D; 
+    --color-gradient-end: #F67280; 
+  }
+}
+
+
 @layer components {
   .btn-header {
     @apply py-1 px-5 bg-blue-300 mx-2;
   }
   .section-style {
-    @apply bg-gray-100 py-8 w-auto min-h-screen  text-white;
+    @apply  relative  flex py-8 w-auto min-h-screen 
+    items-center justify-center
+    ;
   }
   .sidebar-hr {
     @apply border-t border-gray-600 my-4;
@@ -43,6 +156,10 @@
         text-white bg-gray-900 
         text-xs font-bold
         transition-all duration-100 scale-0 origin-left;
+  }
+  .themeToggleButton {
+    @apply absolute flex items-center justify-center
+    h-8 w-16 mx-auto shadow-md bg-white p-1 rounded-3xl
   }
 
 }

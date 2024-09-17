@@ -59,7 +59,8 @@ const Sidebar = () => {
   }, [location, dispatch]);
 
   return (
-    <div className={`flex flex-col ${isOpen ? 'w-64 bg-slate-500' : 'w-20 bg-slate-500/20'} text-lg transition-all duration-300 fixed h-screen`}>
+    <div className={`flex flex-col ${isOpen ? 'w-64 bg-slate-500' : 'w-20 bg-slate-500/20'}
+     text-lg transition-all duration-300 z-20 fixed h-screen`}>
       <div className="p-4 mt-12 flex items-center justify-between">
         {isOpen && <span className="font-bold text-white">{pageTitle}</span>}
         <button onClick={() => dispatch(toggleSidebar())} className="sidebarArrow">

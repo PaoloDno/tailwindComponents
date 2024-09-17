@@ -8,18 +8,33 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        light: {
-          background: '#ffffff',
-          text: '#000000',
-          primary: '#3b82f6'
-        },
-        dark: {
-          background: '#252525',
-          text: '#f9fafb',
-          primary: '#3b82f6'
-        },
+      textColor: {
+        skin: {
+          base: 'var(--color-text-base)',
+          muted: 'var(--color-text-muted)',
+          inverted: 'var(--color-text-inverted)',
+        }
       },
+      backgroundColor: {
+        skin: {
+          fill: 'var(--color-fill)',
+          'button-accent': 'var(--color-button-accent)',
+          'button-accent-hover': 'var(--color-button-hover)',
+          'button-accent-muted': 'var(--color-button-muted)',
+        }
+      },
+      borderColor: {
+        skin: {
+          base: 'var(--color-border-base)',
+          muted: 'var(--color-border-muted)',
+        }
+      },
+      gradientColorStops: {
+        skin: {
+          start: 'var(--color-gradient-start)',
+          end: 'var(--color-gradient-end)'
+        }
+      }
     },
   },
   plugins: [],
