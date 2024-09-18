@@ -31,7 +31,7 @@ const ThemePage = () => {
     },
     {
       id: "sections3",
-      theme: "midnight",
+      theme: "night",
       title: "Midnight Purple",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, magni.",

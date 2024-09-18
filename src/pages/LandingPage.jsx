@@ -3,16 +3,12 @@ import SideBar from "../components/Sidebar"
 
 const LandingPage = () => {
 
-  const sections = [
-    {id: "top", label: "top"},
-    {id: "mid", label: "mid"},
-    {id: "footer", label: "end"},
-  ]
+  
 
   return (
     <div className="flex w-max flex-row">
       
-      <SideBar sections={sections} className="flex w-64"/>
+      <SideBar className="flex w-64"/>
 
       <div className="flex flex-col">
         <section className="section-style" id="top">
