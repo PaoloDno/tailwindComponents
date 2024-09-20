@@ -4,119 +4,115 @@
 
 @layer base {
   :root {
-    --color-text-base: #333333;
-    --color-text-muted: #284d4b;
-    --color-text-inverted: #7ee9e9;
+    /* Common default colors */
+    --color-text-base: 51, 51, 51;
+    --color-text-secondary: 51, 51, 51;
+    --color-text-muted: 40, 77, 75;
+    --color-text-inverted: 126, 233, 233;
 
-    --color-fill: #f5f7eb;
+    --color-fill-primary: 245, 247, 235;
+    --color-fill-secondary: 245, 247, 235;
+    --color-button-inverted: 255, 255, 255;
 
-    --color-button-accent: #282e2e;
-    --color-button-accent-hover: #607679;
-    --color-button-accent-muted: #98b4b3;
-    --color-button-accent-inverted: #ffffff; /* New inverted accent */
+    --color-button-primary: 40, 46, 46; /* Accent button color */
+    --color-button-secondary: 152, 180, 179; /* Muted button color */
+    --color-button-inverted: 255, 255, 255;
 
-    --color-border-base: #d3eaf3;
-    --color-border-muted: #52aca4;
+    --color-border-base: 211, 234, 243;
+    --color-border-muted: 82, 172, 164;
 
-    --color-gradient-start: #7ac4d6;
-    --color-gradient-end: #bce2e0;
+    --color-gradient-start: 122, 196, 214;
+    --color-gradient-end: 188, 226, 224;
   }
 
+  * {
+    @apply transition-colors duration-300 ease-in;
+  }
+
+  /* THEME OVERRIDES */
+
+  /* Sunset theme */
   .theme-sunset {
-    --color-text-base: #1A1A1A;
-    --color-text-muted: #5f511a;
-    --color-text-inverted: #ffffff;
-
-    --color-fill: #ff9b6d;
-
-    --color-button-accent: #f84949;
-    --color-button-accent-hover: #fc3030;
-    --color-button-accent-muted: #eff0b0;
-    --color-button-accent-inverted: #fff5e6; /* Inverted accent for sunset theme */
-
-    --color-border-base: #f5d7bf;
-    --color-border-muted: #f39843;
-
-    --color-gradient-start: #5c501a;
-    --color-gradient-end: #FFE66D;
+    --color-text-base: 218, 57, 57;
+    --color-text-secondary: 95, 81, 27; /* Added secondary */
+    --color-text-muted: 95, 81, 27;
+    --color-fill-primary: 255, 155, 109;
+    --color-fill-secondary: 255, 155, 109; /* Added secondary */
+    --color-button-primary: 248, 73, 73;
+    --color-button-secondary: 239, 240, 176;
+    --color-button-inverted: 255, 245, 230;
+    --color-border-base: 245, 215, 191;
+    --color-border-muted: 243, 152, 67;
+    --color-gradient-start: 92, 80, 26;
+    --color-gradient-end: 255, 230, 109;
   }
 
+  /* Ocean theme */
   .theme-ocean {
-    --color-text-base: #ffffff;
-    --color-text-muted: #DEF2F1;
-    --color-text-inverted: #73c3e0;
-
-    --color-fill: #FEFFFF;
-
-    --color-button-accent: #1b6872;
-    --color-button-accent-hover: #1f94a3;
-    --color-button-accent-muted: #DEF2F1;
-    --color-button-accent-inverted: #031a24; /* Dark inverted for contrast */
-
-    --color-border-base: #d3eaf3;
-    --color-border-muted: #43f3ea;
-
-    --color-gradient-start: #015872;
-    --color-gradient-end: #4f9994;
+    --color-text-base: 255, 255, 255;
+    --color-text-secondary: 222, 242, 241; /* Added secondary */
+    --color-text-muted: 222, 242, 241;
+    --color-fill-primary: 254, 255, 255;
+    --color-fill-secondary: 254, 255, 255; /* Added secondary */
+    --color-button-primary: 27, 104, 114;
+    --color-button-secondary: 222, 242, 241;
+    --color-button-inverted: 3, 26, 36;
+    --color-border-base: 211, 234, 243;
+    --color-border-muted: 67, 243, 234;
+    --color-gradient-start: 1, 88, 114;
+    --color-gradient-end: 79, 153, 148;
   }
 
+  /* Night theme */
   .theme-night {
-    --color-text-base: #230d25;
-    --color-text-muted: #9D4EDD;
-    --color-text-inverted: #151233;
-
-    --color-fill: #4A0D67;
-
-    --color-button-accent: #6A0572;
-    --color-button-accent-hover: #9D4EDD;
-    --color-button-accent-muted: #D9D7F1;
-    --color-button-accent-inverted: #F5E5F0; /* Light inverted for contrast */
-
-    --color-border-base: #D9D7F1;
-    --color-border-muted: #6A0572;
-
-    --color-gradient-start: #6A0572;
-    --color-gradient-end: #D9D7F1;
+    --color-text-base: 35, 13, 37;
+    --color-text-secondary: 157, 78, 221; /* Added secondary */
+    --color-text-muted: 157, 78, 221;
+    --color-fill-primary: 74, 13, 103;
+    --color-fill-secondary: 74, 13, 103; /* Added secondary */
+    --color-button-primary: 106, 5, 114;
+    --color-button-secondary: 217, 215, 241;
+    --color-button-inverted: 245, 229, 240;
+    --color-border-base: 217, 215, 241;
+    --color-border-muted: 106, 5, 114;
+    --color-gradient-start: 106, 5, 114;
+    --color-gradient-end: 217, 215, 241;
   }
 
+  /* Forest theme */
   .theme-forest {
-    --color-text-base: #d3f6a7;
-    --color-text-muted: #aed987;
-    --color-text-inverted: #1c3b15;
-
-    --color-fill: #2a6f23;
-
-    --color-button-accent: #89d296;
-    --color-button-accent-hover: #64b07f;
-    --color-button-accent-muted: #f5d3a3;
-    --color-button-accent-inverted: #ffffff; /* Bright inverted accent */
-
-    --color-border-base: #b8dba7;
-    --color-border-muted: #4f8a30;
-
-    --color-gradient-start: #4a9e4a;
-    --color-gradient-end: #8edc7c;
+    --color-text-base: 211, 246, 167;
+    --color-text-secondary: 174, 217, 135; /* Added secondary */
+    --color-text-muted: 174, 217, 135;
+    --color-fill-primary: 42, 111, 35;
+    --color-fill-secondary: 42, 111, 35; /* Added secondary */
+    --color-button-primary: 137, 210, 150;
+    --color-button-secondary: 245, 211, 163;
+    --color-button-inverted: 255, 255, 255;
+    --color-border-base: 184, 219, 167;
+    --color-border-muted: 79, 138, 48;
+    --color-gradient-start: 74, 158, 74;
+    --color-gradient-end: 142, 220, 124;
   }
 
+  /* Retro theme */
   .theme-retro {
-    --color-text-base: #ffffff;
-    --color-text-muted: #FF4081;
-    --color-text-inverted: #2c3e50;
-
-    --color-fill: #8c60a7;
-
-    --color-button-accent: #FF4081;
-    --color-button-accent-hover: #d36b98;
-    --color-button-accent-muted: #2c3e50;
-    --color-button-accent-inverted: #F7F9FC; /* Light inverted for retro */
-
-    --color-border-base: #FF4081;
-    --color-border-muted: #2c3e50;
-
-    --color-gradient-start: #2c3e50;
-    --color-gradient-end: #FF4081;
+    --color-text-base: 255, 255, 255;
+    --color-text-secondary: 255, 64, 129; /* Added secondary */
+    --color-text-muted: 255, 64, 129;
+    --color-fill-primary: 140, 96, 167;
+    --color-fill-secondary: 140, 96, 167; /* Added secondary */
+    --color-button-primary: 255, 64, 129;
+    --color-button-secondary: 44, 62, 80;
+    --color-button-inverted: 247, 249, 252;
+    --color-border-base: 255, 64, 129;
+    --color-border-muted: 44, 62, 80;
+    --color-gradient-start: 44, 62, 80;
+    --color-gradient-end: 255, 64, 129;
   }
 }
+
+
 
 @layer components {
   .btn-header {

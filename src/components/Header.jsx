@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full h-10 transition-opacity duration-300 ease-in-out ${
-        isScrolled ? "bg-blue-200 bg-opacity-70" : "bg-blue-200 bg-opacity-100"
+        !isScrolled ? "bg-skin-primary opacity-100" : "bg-skin-primary opacity-10 hover:opacity-100"
       } hover:bg-opacity-100 z-50`}
     >
       <div className="relative h-20 w-screen">

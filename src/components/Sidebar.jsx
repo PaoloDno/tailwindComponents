@@ -62,7 +62,7 @@ const Sidebar = () => {
     <div className={`flex flex-col ${isOpen ? 'w-64 bg-slate-500' : 'w-20 bg-slate-500/20'}
      text-lg transition-all duration-300 z-20 fixed h-screen`}>
       <div className="p-4 mt-12 flex items-center justify-between">
-        {isOpen && <span className="font-bold text-white">{pageTitle}</span>}
+        {isOpen && <span className="font-bold text-skin-primary">{pageTitle}</span>}
         <button onClick={() => dispatch(toggleSidebar())} className="sidebarArrow">
           {isOpen ? 
           <ArrowLeft  size={48} /> 
@@ -75,7 +75,7 @@ const Sidebar = () => {
           <ul className="space-y-2">
             {sections.map((section) => (
               <a href={`#${section.id}`}>
-              <li key={section.id} className="sidebar-label">
+              <li key={section.id} className="relative flex items-center justify-center h-10 min-w-20 mt-2 mb-2 mx-auto shadow-md bg-skin-button-primary text-white text-sm hover:bg-white hover:text-black rounded-sm hover:rounded-2xl transition-all duration-300 ease-linear cursor-pointer;">
                 {section.label}
               </li>
               </a>
