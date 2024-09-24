@@ -3,16 +3,11 @@ import SideBar from "../components/Sidebar";
 
 const ComponentPage = () => {
 
-  const sections = [
-    {id: "top", label: "top"},
-    {id: "mid", label: "mid"},
-    {id: "footer", label: "end"},
-  ]
 
   return (
     <div className="flex w-max flex-row">
       
-      <SideBar sections={sections} className="flex w-64"/>
+      <SideBar />
 
       <div className="flex flex-col ml-20">
         <section className="section-style" id="sections1">

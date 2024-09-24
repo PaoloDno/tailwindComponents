@@ -17,9 +17,8 @@ module.exports = {
     extend: {
       textColor: {
         skin: {
-          primary: withOpacity('--color-text-base'),
+          primary: withOpacity('--color-text-primary'),
           secondary: withOpacity('--color-text-secondary'),
-          muted: withOpacity('--color-text-muted'),
           inverted: withOpacity('--color-text-inverted'),
         },
       },
@@ -27,6 +26,7 @@ module.exports = {
         skin: {
           primary: withOpacity('--color-fill-primary'),
           secondary: withOpacity('--color-fill-secondary'),
+          inverted: withOpacity('--color-fill-inverted'),
           'button-primary': withOpacity('--color-button-primary'),
           'button-secondary': withOpacity('--color-button-secondary'),
           'button-inverted': withOpacity('--color-button-inverted'),
@@ -34,8 +34,8 @@ module.exports = {
       },
       borderColor: {
         skin: {
-          base: withOpacity('--color-border-base'),
-          muted: withOpacity('--color-border-muted'),
+          primary: withOpacity('--color-border-primary'),
+          inverted: withOpacity('--color-border-inverted'),
         },
       },
       gradientColorStops: {

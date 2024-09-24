@@ -12,7 +12,7 @@ const ThemeWrapper = ({ children }) => {
   }, [currentTheme]);
 
   return (
-    <div className={theme}>
+    <div className={`theme-${theme}`}>
       {children}
     </div>
   );

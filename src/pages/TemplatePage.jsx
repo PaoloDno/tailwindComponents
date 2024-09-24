@@ -2,19 +2,14 @@ import React from "react"
 import SideBar from "../components/Sidebar"
 
 const TemplatePage = () => {
-  const sections = [
-    {id: "top", label: "top"},
-    {id: "mid", label: "mid"},
-    {id: "footer", label: "end"},
-  ]
-  
-  return (
-    <div className="flex w-max flex-row relative">
-      
-      <SideBar sections={sections} className="flex w-64 overflow-hidden h-screen"/>
 
-      <div className="flex flex-col ml-20">
-        <section className="section-style" id="sections1">
+  return (
+    <div className="flex w-screen flex-row relative">
+      
+      <SideBar />
+
+      <div className="flex flex-col lg:ml-20 content-style">
+        <section className="section-style mt-20" id="sections1">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">Section Title</h2>
             <p className="text-lg text-center text-gray-600 mb-6">

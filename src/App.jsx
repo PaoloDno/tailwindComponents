@@ -13,12 +13,12 @@ function App() {
     <Router>
       <Header />
       <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/Component" element={<ComponentPage />} />
-      <Route path="/Template" element={<TemplatePage />} />
-      <Route path="/Theme" element={<ThemePage />} />
-      <Route path="/AboutUs" element={<AboutUsPage />} />
-      <Route path='*' element={<LandingPage/>} />
+      <Route path="/tailwindComponents/" element={<LandingPage />} />
+      <Route path="/tailwindComponents/Component" element={<ComponentPage />} />
+      <Route path="/tailwindComponents/Template" element={<TemplatePage />} />
+      <Route path="/tailwindComponents/Theme" element={<ThemePage />} />
+      <Route path="/tailwindComponents/AboutUs" element={<AboutUsPage />} />
+      
       </Routes>
     </Router>
       

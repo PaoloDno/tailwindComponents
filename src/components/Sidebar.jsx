@@ -1,20 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleSidebar, closeSidebar, updateSections } from '../redux/reducers/sidebarReducer';
+import { closeSidebar, updateSections } from '../redux/reducers/sidebarReducer';
 import { useLocation } from 'react-router-dom';
 
-import { 
-  MdKeyboardDoubleArrowRight as ArrowRight,
-  MdOutlineKeyboardDoubleArrowLeft as ArrowLeft 
-} from "react-icons/md";
+import bgImgsunset from "../assets/imgs/sideSunset.jpg";
+import bgImgocean from "../assets/imgs/sideOcean.jpg";
+import bgImgforest from "../assets/imgs/sideSunset.jpg";
+import bgImgnight from "../assets/imgs/sideSunset.jpg";
+import bgImgretro from "../assets/imgs/sideSunset.jpg";
+
+import { ImCross } from "react-icons/im";
+
+import SidebarToggle from './components/SidebarToggle';
+
 
 const Sidebar = () => {
   const dispatch = useDispatch();
   const isOpen = useSelector((state) => state.sidebar.isOpen);
   const sections = useSelector((state) => state.sidebar.sections);
   const location = useLocation();
-  
+
+  const [sideBgImg, setSideBgImg] = useState('');  
   const [pageTitle, setPageTitle] = useState('');
+
+  useEffect(() => {
+    if (isOpen) {
+      console.log('Sidebar opened');
+      // Additional side effects when sidebar opens
+    } else {
+      console.log('Sidebar closed');
+      // Additional side effects when sidebar closes
+    }
+  }, [isOpen]);
+
 
   useEffect(() => {
     switch (location.pathname) {
@@ -59,33 +77,36 @@ const Sidebar = () => {
   }, [location, dispatch]);
 
   return (
-    <div className={`flex flex-col ${isOpen ? 'w-64 bg-slate-500' : 'w-20 bg-slate-500/20'}
-     text-lg transition-all duration-300 z-20 fixed h-screen`}>
-      <div className="p-4 mt-12 flex items-center justify-between">
-        {isOpen && <span className="font-bold text-skin-primary">{pageTitle}</span>}
-        <button onClick={() => dispatch(toggleSidebar())} className="sidebarArrow">
-          {isOpen ? 
-          <ArrowLeft  size={48} /> 
-          : <ArrowRight size={48} />}
-        </button>
-      </div>
+    <div className={`hidden lg:flex flex-col fixed h-screen
+    ${isOpen ? 'w-64 bg-skin-inverted' : 'w-20 bg-skin-secondary'}
+    text-lg transition-all duration-300 z-20 fixed h-screen`}>
+
+      <SidebarToggle />
 
       {isOpen && (
         <div className="p-4">
+          {isOpen && <span className="font-bold text-skin-inverted">{pageTitle}</span>}
+
           <ul className="space-y-2">
             {sections.map((section) => (
-              <a href={`#${section.id}`}>
-              <li key={section.id} className="relative flex items-center justify-center h-10 min-w-20 mt-2 mb-2 mx-auto shadow-md bg-skin-button-primary text-white text-sm hover:bg-white hover:text-black rounded-sm hover:rounded-2xl transition-all duration-300 ease-linear cursor-pointer;">
-                {section.label}
-              </li>
+              <a href={`#${section.id}`} key={section.id}>
+                <li className="relative flex items-center justify-center h-10 min-w-16 mt-2 mb-2 mx-auto shadow-md 
+                bg-skin-button-primary text-skin-primary text-sm border-skin-primary hover:bg-white hover:text-black rounded-sm hover:rounded-2xl
+                transition-all duration-300 ease-linear cursor-pointer">
+                  {section.label}
+                </li>
               </a>
             ))}
           </ul>
-          <button onClick={() => dispatch(closeSidebar())} className="mt-4 bg-red-500 hover:bg-red-600 text-white rounded-md px-4 py-2">
-            Close
-          </button>
         </div>
       )}
+      <div className={`${!isOpen ? "hidden" : "flex" } absolute top-0 left-0 h-screen w-screen
+      -z-10 opacity-25 bg-skin-secondary`}
+      onClick={() =>dispatch(closeSidebar())}
+      >
+        <ImCross className='absolute top-20 right-20 h-10 w-10'/>
+
+      </div>
     </div>
   );
 };

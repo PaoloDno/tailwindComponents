@@ -1,12 +1,14 @@
 import {createSlice} from '@reduxjs/toolkit'
 
 
-const themes = ['sunset', 'ocean', 'forest', 'night', 'retro'];
+const themes = ['base','sunset', 'ocean', 'forest', 'night', 'retro'];
+
+
 
 const themeSlice = createSlice({
   name: 'theme',
   initialState: {
-    currentTheme: 'sunset',
+    currentTheme: 'base',
   },
   reducers: {
     nextTheme: (state) => {

@@ -4,22 +4,20 @@
 
 @layer base {
   :root {
-    /* Common default colors */
-    --color-text-base: 51, 51, 51;
-    --color-text-secondary: 51, 51, 51;
-    --color-text-muted: 40, 77, 75;
-    --color-text-inverted: 126, 233, 233;
+    --color-text-primary: 35, 13, 37;
+    --color-text-secondary: 24, 41, 39;
+    --color-text-inverted: 251, 250, 252;
 
-    --color-fill-primary: 245, 247, 235;
-    --color-fill-secondary: 245, 247, 235;
-    --color-button-inverted: 255, 255, 255;
+    --color-fill-primary: 202, 229, 241;
+    --color-fill-secondary: 66, 252, 242;
+    --color-fill-inverted: 7, 2, 2;
 
-    --color-button-primary: 40, 46, 46; /* Accent button color */
-    --color-button-secondary: 152, 180, 179; /* Muted button color */
-    --color-button-inverted: 255, 255, 255;
+    --color-button-primary: 6, 149, 206;
+    --color-button-secondary: 47, 197, 243;
+    --color-button-inverted: 0, 21, 29;
 
-    --color-border-base: 211, 234, 243;
-    --color-border-muted: 82, 172, 164;
+    --color-border-primary: 2, 3, 3;
+    --color-border-inverted: 227, 255, 253;
 
     --color-gradient-start: 122, 196, 214;
     --color-gradient-end: 188, 226, 224;
@@ -33,123 +31,152 @@
 
   /* Sunset theme */
   .theme-sunset {
-    --color-text-base: 218, 57, 57;
-    --color-text-secondary: 95, 81, 27; /* Added secondary */
-    --color-text-muted: 95, 81, 27;
-    --color-fill-primary: 255, 155, 109;
-    --color-fill-secondary: 255, 155, 109; /* Added secondary */
-    --color-button-primary: 248, 73, 73;
-    --color-button-secondary: 239, 240, 176;
-    --color-button-inverted: 255, 245, 230;
-    --color-border-base: 245, 215, 191;
-    --color-border-muted: 243, 152, 67;
-    --color-gradient-start: 92, 80, 26;
-    --color-gradient-end: 255, 230, 109;
+    --color-text-primary: 39, 5, 5;
+    --color-text-secondary: 70, 41, 15;
+    --color-text-inverted: 241, 241, 233;
+
+    --color-fill-primary: 240, 160, 107;
+    --color-fill-secondary: 238, 144, 141;
+    --color-fill-inverted: 139, 69, 3;
+
+    --color-button-primary: 235, 215, 172;
+    --color-button-secondary: 248, 217, 221;
+    --color-button-inverted: 192, 4, 4;
+
+    --color-border-primary: 43, 20, 2;
+    --color-border-inverted: 177, 33, 7;
+
+    --color-gradient-start: 190, 60, 0;
+    --color-gradient-end: 243, 217, 145;
   }
 
   /* Ocean theme */
   .theme-ocean {
-    --color-text-base: 255, 255, 255;
-    --color-text-secondary: 222, 242, 241; /* Added secondary */
-    --color-text-muted: 222, 242, 241;
-    --color-fill-primary: 254, 255, 255;
-    --color-fill-secondary: 254, 255, 255; /* Added secondary */
+    --color-text-primary: 255, 255, 255;
+    --color-text-secondary: 178, 252, 248;
+    --color-text-inverted: 17, 54, 88;
+
+    --color-fill-primary: 5, 102, 109;
+    --color-fill-secondary: 60, 101, 177;
+    --color-fill-inverted: 167, 225, 243;
+
     --color-button-primary: 27, 104, 114;
-    --color-button-secondary: 222, 242, 241;
-    --color-button-inverted: 3, 26, 36;
-    --color-border-base: 211, 234, 243;
-    --color-border-muted: 67, 243, 234;
+    --color-button-secondary: 13, 194, 164;
+    --color-button-inverted: 229, 245, 252;
+
+    --color-border-primary: 211, 234, 243;
+    --color-border-inverted: 0, 37, 36;
+
     --color-gradient-start: 1, 88, 114;
-    --color-gradient-end: 79, 153, 148;
+    --color-gradient-end: 111, 187, 182;
   }
 
   /* Night theme */
   .theme-night {
-    --color-text-base: 35, 13, 37;
-    --color-text-secondary: 157, 78, 221; /* Added secondary */
-    --color-text-muted: 157, 78, 221;
-    --color-fill-primary: 74, 13, 103;
-    --color-fill-secondary: 74, 13, 103; /* Added secondary */
-    --color-button-primary: 106, 5, 114;
-    --color-button-secondary: 217, 215, 241;
-    --color-button-inverted: 245, 229, 240;
-    --color-border-base: 217, 215, 241;
-    --color-border-muted: 106, 5, 114;
-    --color-gradient-start: 106, 5, 114;
-    --color-gradient-end: 217, 215, 241;
+    --color-text-primary: 76, 28, 82;
+    --color-text-secondary: 89, 6, 156;
+    --color-text-inverted: 190, 225, 248;
+
+    --color-fill-primary: 220, 170, 248;
+    --color-fill-secondary: 192, 57, 233;
+    --color-fill-inverted: 77, 24, 24;
+
+    --color-button-primary: 163, 164, 230;
+    --color-button-secondary: 125, 114, 247;
+    --color-button-inverted: 59, 8, 66;
+
+    --color-border-primary: 15, 9, 77;
+    --color-border-inverted: 252, 204, 255;
+
+    --color-gradient-start: 98, 7, 172;
+    --color-gradient-end: 245, 192, 240;
   }
 
   /* Forest theme */
   .theme-forest {
-    --color-text-base: 211, 246, 167;
-    --color-text-secondary: 174, 217, 135; /* Added secondary */
-    --color-text-muted: 174, 217, 135;
-    --color-fill-primary: 42, 111, 35;
-    --color-fill-secondary: 42, 111, 35; /* Added secondary */
-    --color-button-primary: 137, 210, 150;
-    --color-button-secondary: 245, 211, 163;
-    --color-button-inverted: 255, 255, 255;
-    --color-border-base: 184, 219, 167;
-    --color-border-muted: 79, 138, 48;
-    --color-gradient-start: 74, 158, 74;
-    --color-gradient-end: 142, 220, 124;
-  }
+    --color-text-primary: 218, 233, 202;
+    --color-text-secondary: 143, 248, 213;
+    --color-text-inverted: 62, 95, 10;
 
-  /* Retro theme */
-  .theme-retro {
-    --color-text-base: 255, 255, 255;
-    --color-text-secondary: 255, 64, 129; /* Added secondary */
-    --color-text-muted: 255, 64, 129;
-    --color-fill-primary: 140, 96, 167;
-    --color-fill-secondary: 140, 96, 167; /* Added secondary */
-    --color-button-primary: 255, 64, 129;
-    --color-button-secondary: 44, 62, 80;
-    --color-button-inverted: 247, 249, 252;
-    --color-border-base: 255, 64, 129;
-    --color-border-muted: 44, 62, 80;
-    --color-gradient-start: 44, 62, 80;
-    --color-gradient-end: 255, 64, 129;
+    --color-fill-primary: 80, 97, 75;
+    --color-fill-secondary: 30, 88, 23;
+    --color-fill-inverted: 255, 255, 255;
+
+    --color-button-primary: 1, 39, 20;
+    --color-button-secondary: 35, 61, 1;
+    --color-button-inverted: 227, 236, 225;
+
+    --color-border-primary: 165, 231, 133;
+    --color-border-inverted: 25, 59, 8;
+
+    --color-gradient-start: 175, 238, 159;
+    --color-gradient-end: 36, 37, 36;
+}
+
+.theme-retro {
+    --color-text-primary: 231, 220, 201;
+    --color-text-secondary: 230, 157, 97;
+    --color-text-inverted: 1, 32, 78;
+
+    --color-fill-primary: 3, 105, 119;
+    --color-fill-secondary: 5, 56, 133;
+    --color-fill-inverted: 252, 251, 231;
+
+    --color-button-primary: 205, 51, 51;
+    --color-button-secondary: 114, 35, 28;
+    --color-button-inverted: 223, 233, 247;
+
+    --color-border-primary: 245, 158, 187;
+    --color-border-inverted: 9, 133, 122;
+
+    --color-gradient-start: 1, 32, 49;
+    --color-gradient-end: 212, 64, 113;
   }
 }
 
-
-
 @layer components {
-  .btn-header {
-    @apply py-1 px-5 bg-blue-300 mx-2;
+  
+  .content-style {
+    @apply relative flex flex-col border-l-4 border-skin-inverted py-8 min-h-screen items-center justify-center bg-skin-primary bg-opacity-30;
+    width: 100vw;
+  }
+  
+  @media (min-width: 1024px) {
+    .content-style {
+      width: calc(100vw - 5rem); 
+    }
   }
 
-  .btn-accent-inverted {
-    @apply py-2 px-4 rounded-lg;
-    background-color: var(--color-button-accent-inverted);
-    color: var(--color-text-inverted);
+  .section-style{
+    @apply flex items-start mb-6 justify-start w-full min-h-screen py-8 px-6 bg-white shadow-md rounded-lg 
+    hover:shadow-lg transition-shadow duration-300 ease-in-out
+
+  }  
+  
+
+  .btn-color {
+    @apply text-skin-primary bg-skin-primary hover:text-skin-inverted
+    hover:bg-skin-inverted border-skin-primary hover:border-skin-inverted;
   }
 
-  .section-style {
-    @apply relative flex py-8 w-auto min-h-screen items-center justify-center;
+  .btn-color-inverted {
+    @apply text-skin-inverted border-skin-inverted hover:text-skin-primary hover:border-skin-primary hover:bg-skin-inverted;
   }
 
-  .sidebar-hr {
-    @apply border-t border-gray-600 my-4;
+  .btn-header{
+    @apply flex items-center justify-center m-2 px-5 py-2 min-w-[8rem]
+    text-skin-primary bg-skin-primary hover:text-skin-inverted hover:bg-skin-inverted
+    rounded-xl border-2 border-skin-primary hover:border-skin-inverted;
   }
 
-  .sidebarArrow {
-    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 ml-auto mr-2 shadow-lg bg-slate-700 text-white hover:bg-slate-500 rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer;
-  }
-
-  .sidebar-icon {
-    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto shadow-lg bg-gray-800 hover:bg-slate-500 hover:text-white rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer;
+  .icon-header {
+    @apply w-9 h-9 lg:w-10 lg:h-10 justify-center text-xl items-center bg-skin-inverted
+    text-skin-inverted rounded-full hover:text-skin-inverted hover:bg-skin-inverted hover:rounded-xl p-1 lg:p-2
+    border-2 border-skin-primary hover:border-skin-inverted;
   }
 
   .sidebar-label {
     @apply relative flex items-center justify-center h-10 min-w-20 mt-2 mb-2 mx-auto shadow-md bg-gray-800 text-white text-sm hover:bg-white hover:text-black rounded-sm hover:rounded-2xl transition-all duration-300 ease-linear cursor-pointer;
   }
 
-  .sidebar-tooltip {
-    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all duration-100 scale-0 origin-left;
-  }
-
-  .themeToggleButton {
-    @apply absolute flex items-center justify-center h-8 w-16 mx-auto shadow-md bg-white p-1 rounded-3xl;
-  }
 }
