@@ -31,7 +31,7 @@ const Header = () => {
         from-skin-start to-skin-end h-full px-5
         flex flex-row items-center justify-between">
           <Link to="/" className="flex text-skin-primary">
-            <div className="p-1 px-4 md:px-0 font-bold text-sm md:text-lg"><i>My Tailwind Design Library</i></div>
+            <div className="p-1 px-4 md:px-0 font-bold text-sm md:text-lg"><i>My Tailwind Library</i></div>
           </Link>
           <nav className="hidden flex-row p-1 mx-2 lg:flex">
             <ul className="flex flex-row px-2 justify-between w-auto">
